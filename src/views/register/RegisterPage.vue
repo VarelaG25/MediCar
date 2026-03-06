@@ -68,6 +68,19 @@
           </div>
         </div>
 
+      <h3>Póliza</h3>
+        <input type="text" v-model="form.compania" placeholder="Compañía de seguro" />
+        <input type="text" v-model="form.numeroPoliza" placeholder="Número de póliza" />
+
+            <h3>Vehículo</h3>
+            <input type="text" v-model="form.marca" placeholder="Marca del vehículo" />
+            <input type="text" v-model="form.modelo" placeholder="Modelo del vehículo" />
+            <input type="text" v-model="form.placas" placeholder="Placas" />
+
+            <!-- Dirección -->
+            <h3>Dirección</h3>
+            <input type="text" v-model="form.direccion" placeholder="Dirección del usuario" />
+        
         <button type="submit">Registrarse</button>
 
         <p class="login">
