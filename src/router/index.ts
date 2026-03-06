@@ -12,7 +12,7 @@ const routes = [
 
 // Crear router usando hash history para GitHub Pages
 const router = createRouter({
-  history: createWebHashHistory('/medicar-landing/'), // <- usa hash para evitar 404
+  history: createWebHashHistory('/MediCar/'), // <- usa hash para evitar 404
   routes,
 })
 

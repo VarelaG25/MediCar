@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/medicar-landing/',
+  base: '/MediCar/',
   plugins: [vue(), tailwindcss()],
   resolve: {
     alias: {
