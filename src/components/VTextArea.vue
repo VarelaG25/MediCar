@@ -1,5 +1,9 @@
 <template>
-    <div class="card flex justify-center">
+    <div class="flex flex-col gap-2 w-full">
+        <label v-if="props.text">
+            {{ props.text }}
+        </label>
+
         <Textarea v-model="model" :rows="props.rows" :cols="props.cols" />
     </div>
 </template>
@@ -15,6 +19,10 @@ const props = defineProps({
     cols: {
         type: Number,
         default: 30
+    },
+    text: {
+        type: String,
+        default: null
     }
 });
 

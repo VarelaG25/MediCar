@@ -1,11 +1,18 @@
 <template>
-    <div class="flex flex-row gap-3 w-full">
-        <div v-for="(option) in source" :key="option.id" class="flex items-center gap-2">
-            <RadioButton v-model="model" :inputId="`${inputId}-${option.id}`" :name="name" :value="option.id" />
+    <div class="flex flex-col gap-2 w-full">
+        <label v-if="props.label">
+            {{ props.label }}
+        </label>
 
-            <label :for="`${inputId}-${option.id}`">
-                {{ option.value }}
-            </label>
+        <div class="flex flex-row gap-3">
+            <div v-for="option in props.source" :key="option.id" class="flex items-center gap-2">
+                <RadioButton v-model="model" :inputId="`${props.inputId}-${option.id}`" :name="props.name"
+                    :value="option.id" />
+
+                <label :for="`${props.inputId}-${option.id}`">
+                    {{ option.value }}
+                </label>
+            </div>
         </div>
     </div>
 </template>
@@ -20,7 +27,7 @@ interface RadioOption {
 
 const model = defineModel<string | number>()
 
-defineProps({
+const props = defineProps({
     source: {
         type: Array as () => RadioOption[],
         default: () => []
@@ -32,6 +39,10 @@ defineProps({
     inputId: {
         type: String,
         default: 'radio'
+    },
+    label: {
+        type: String,
+        default: ''
     }
 })
 </script>
