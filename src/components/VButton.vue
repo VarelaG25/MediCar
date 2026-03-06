@@ -12,12 +12,11 @@ const emit = defineEmits(['click'])
 const props = defineProps({
     label: {
         type: String,
-        default: 'Search'
+        default: 'Primary'
     },
     icon: {
         type: String,
-        default: 'pi pi-search'
-    }
+    },
 })
 
 const loading = ref(false)

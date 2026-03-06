@@ -1,23 +1,32 @@
 <template>
-    <div class="container">
-        <section class="card flex flex-col gap-6">
-            <!-- Encabezado -->
-            <div>
-                <h1 class="titles mb-4">Registro de siniestro automotriz</h1>
-                <p class="desc">Por favor, complete los datos del siniestro.</p>
+    <div class="container mx-auto py-8">
+        <section class="bg-white rounded-xl shadow-lg p-6 flex flex-col gap-6">
+
+            <!-- Header -->
+            <div class="bg-blue-50 rounded-lg p-4 mb-6">
+                <h1 class="text-2xl font-bold text-blue-900 mb-2">Registro de Siniestro Automotriz</h1>
+                <p class="text-gray-600">Complete los datos del siniestro para continuar.</p>
             </div>
-            <!-- Contenido principal -->
-            <div>
-                <UserFilter />
+
+            <!-- User Filter -->
+            <UserFilter />
+
+            <hr class="border-t border-gray-200 my-2" />
+
+            <!-- User Information -->
+            <UserInformation />
+
+            <hr class="border-t border-gray-200 my-2" />
+
+            <!-- Sinister Register -->
+            <SinisterRegister />
+
+            <!-- Buttons -->
+            <div class="flex justify-end gap-4 mt-6">
+                <VButton label="Cancelar" severity="danger" variant="text" />
+                <VButton label="Registrar" severity="success" />
             </div>
-            <hr class="text-gray-200">
-            <div class="flex flex-col gap-4">
-                <UserInformation />
-            </div>
-            <hr class="text-gray-200">
-            <div >
-                <SinisterRegister />
-            </div>
+
         </section>
     </div>
 </template>

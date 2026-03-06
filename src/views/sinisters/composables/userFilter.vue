@@ -13,7 +13,7 @@
                 <VInput label="Número de póliza" placeholder="Ingrese el número de póliza" />
             </div>
             <div class="flex items-end w-full">
-                <VButton label="Buscar" icon="pi pi-search" @click="() => console.log('Buscar siniestro')" />
+            <VButton label="Buscar" severity="secondary" icon="pi pi-search" @click="() => console.log('Buscar siniestro')" />
             </div>
         </div>
     </section>
