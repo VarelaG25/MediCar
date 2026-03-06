@@ -3,7 +3,7 @@
         <section class="card flex flex-col gap-6">
             <!-- Encabezado -->
             <div>
-                <h1 class="titles">Registro de siniestro automotriz</h1>
+                <h1 class="titles mb-4">Registro de siniestro automotriz</h1>
                 <p class="desc">Por favor, complete los datos del siniestro.</p>
             </div>
             <!-- Contenido principal -->

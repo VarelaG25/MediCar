@@ -22,8 +22,10 @@
             <p>Capturar evidencia</p>
             <VFile />
         </section>
-        <section class="flex justify-end w-[50%]">
-            <VButton label="Registrar siniestro" class="w-full" @click="() => console.log('Siniestro registrado')" />
+        <section class="flex justify-end gap-4">
+            <VButton label="Rechazar" severity="danger" class="w-full" @click="() => console.log('Siniestro registrado')" />
+            <VButton label="Registrar" severity="info" class="w-full" @click="() => console.log('Siniestro registrado')" />
+            <VButton label="Aprobar" severity="success" class="w-full" @click="() => console.log('Siniestro registrado')" />
         </section>
     </div>
 </template>
