@@ -13,7 +13,7 @@ import { ref, watch } from 'vue';
 const radioSelection = ref('');
 const textInput = ref('');
 const dateTime = ref(null);
-const selectedCity = ref(null);
+const selectedCity = ref(0);
 
 watch(radioSelection, (value) => {
     console.log('Radio seleccionado:', value);
