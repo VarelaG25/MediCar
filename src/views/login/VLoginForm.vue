@@ -3,6 +3,11 @@ import { ref } from 'vue'
 
 const email = ref('')
 const password = ref('')
+
+const navigate = () => {
+  console.log('Navegando a la página de registro')
+  location.href = '/register'
+}
 </script>
 
 <template>
@@ -23,7 +28,7 @@ const password = ref('')
             </h1>
 
             <p class="text-slate-500 text-sm">
-              Accede a tu cuenta de SeguroTotal y gestiona tus pólizas fácilmente.
+              Accede a tu cuenta de MediCar y gestiona tus pólizas fácilmente.
             </p>
           </div>
 
@@ -36,12 +41,8 @@ const password = ref('')
                 Correo electrónico
               </label>
 
-              <input
-                v-model="email"
-                type="email"
-                placeholder="ejemplo@correo.com"
-                class="w-full rounded-xl border border-slate-200 px-4 py-3"
-              />
+              <input v-model="email" type="email" placeholder="ejemplo@correo.com"
+                class="w-full rounded-xl border border-slate-200 px-4 py-3" />
             </div>
 
             <!-- PASSWORD -->
@@ -56,12 +57,8 @@ const password = ref('')
                 </a>
               </div>
 
-              <input
-                v-model="password"
-                type="password"
-                placeholder="••••••••"
-                class="w-full rounded-xl border border-slate-200 px-4 py-3"
-              />
+              <input v-model="password" type="password" placeholder="••••••••"
+                class="w-full rounded-xl border border-slate-200 px-4 py-3" />
             </div>
 
             <!-- CHECKBOX -->
@@ -72,8 +69,7 @@ const password = ref('')
 
             <!-- BOTON -->
             <button
-              class="w-full py-4 rounded-xl text-white font-bold bg-gradient-to-r from-blue-600 to-purple-500 shadow-lg"
-            >
+              class="w-full py-4 rounded-xl text-white font-bold bg-gradient-to-r from-blue-600 to-purple-500 shadow-lg">
               Iniciar Sesión
             </button>
 
@@ -82,12 +78,9 @@ const password = ref('')
         </div>
 
         <!-- REGISTER -->
-        <p class="text-center text-sm text-slate-500 mt-6">
-          ¿No tienes una cuenta?
-          <span class="text-blue-600 font-bold">
-            Regístrate ahora
-          </span>
-        </p>
+        <a href="/register" class="mt-6 block text-center text-sm text-slate-600">
+          ¿No tienes una cuenta? <span class="text-blue-600 font-bold">Regístrate</span>
+        </a>
 
       </div>
 
@@ -95,7 +88,7 @@ const password = ref('')
 
     <!-- FOOTER -->
     <div class="text-center text-xs text-slate-400 pb-8">
-      © 2024 SeguroTotal. Todos los derechos reservados.
+      © 2024 MediCar. Todos los derechos reservados.
     </div>
 
   </div>

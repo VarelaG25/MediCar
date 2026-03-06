@@ -72,7 +72,7 @@
 
         <p class="login">
           ¿Ya tienes una cuenta?
-          <a href="#">Inicia sesión</a>
+          <a href="/login">Inicia sesión</a>
         </p>
 
       </form>

@@ -3,9 +3,16 @@
         <div class="mx-auto grid grid-cols-[70%_30%] items-center">
 
             <!-- Título / Logo -->
-            <h1 class="titles text-blue-900 font-semibold text-xl">
-                MediCar
-            </h1>
+            <div class="flex items-center gap-2">
+                <div class="size-8">
+                    <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"></path>
+                    </svg>
+                </div>
+                <h1 class="titles font-semibold text-xl">
+                    MediCar
+                </h1>
+            </div>
 
             <!-- Navegación / Botones -->
             <div class="grid grid-cols-4 gap-2 justify-end">
