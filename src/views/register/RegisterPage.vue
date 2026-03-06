@@ -8,6 +8,11 @@
         <p>Regístrate para proteger tu auto con el mejor respaldo.</p>
       </div>
 
+      <!-- MENSAJE DE ERROR -->
+      <div v-if="errorMessage" class="error">
+        {{ errorMessage }}
+      </div>
+
       <div class="profile">
         <div class="photo">
             <span class="upload-text">Subir foto</span>
@@ -15,6 +20,7 @@
         <p class="photo-text">Foto de Perfil</p>
         <span class="photo-sub">Toca para subir una foto</span>
       </div>
+
       <form @submit.prevent="register">
 
         <label>Nombre</label>
@@ -68,11 +74,50 @@
           </div>
         </div>
 
+        <label>Póliza</label>
+        <input type="text" v-model="form.compania" placeholder="Compañía de seguro" />
+        <input type="text" v-model="form.numeroPoliza" placeholder="Número de póliza" />
+
+        <label>Vehículo</label>
+        <input type="text" v-model="form.marca" placeholder="Marca del vehículo" />
+        <input type="text" v-model="form.modelo" placeholder="Modelo del vehículo" />
+        <input type="text" v-model="form.placas" placeholder="Placas" />
+        
+        <div class="row">
+        <label>Dirección</label>
+        </div>
+
+        <div class="row">
+        <div class="field">
+            <label>País</label>
+            <input type="text" v-model="form.pais" placeholder="País" />
+        </div>
+
+        <div class="field">
+            <label>Estado</label>
+            <input type="text" v-model="form.estado" placeholder="Estado" />
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="field">
+            <label>Ciudad</label>
+            <input type="text" v-model="form.ciudad" placeholder="Ciudad" />
+        </div>
+
+        <div class="field">
+            <label>Código Postal</label>
+            <input type="text" v-model="form.codigoPostal" placeholder="Código Postal" />
+        </div>
+        </div>
+
+        <label>Calle</label>
+        <input type="text" v-model="form.calle" placeholder="Calle y número" />
         <button type="submit">Registrarse</button>
 
         <p class="login">
           ¿Ya tienes una cuenta?
-          <a href="/login">Inicia sesión</a>
+          <a href="#">Inicia sesión</a>
         </p>
 
       </form>
@@ -88,6 +133,7 @@ export default {
 
   data() {
     return {
+      errorMessage: "",
       form: {
         nombre: "",
         apellidoP: "",
@@ -97,19 +143,55 @@ export default {
         alias: "",
         email: "",
         password: "",
-        confirmPassword: ""
+        confirmPassword: "",
+        compania: "",
+        numeroPoliza: "",
+        marca: "",
+        modelo: "",
+        placas: "",
+        direccion: ""
       }
     }
   },
 
   methods: {
     register() {
+
+      // revisar si hay campos vacíos
+      for (let key in this.form) {
+        if (!this.form[key]) {
+          this.errorMessage = "Por favor llena todos los campos."
+          return
+        }
+      }
+
+      // validar contraseñas
+      if (this.form.password !== this.form.confirmPassword) {
+        this.errorMessage = "Las contraseñas no coinciden."
+        return
+      }
+
+      // limpiar error si todo está bien
+      this.errorMessage = ""
+
       console.log("Datos del registro:", this.form)
     }
   }
 }
 </script>
 
+<style scoped>
+
+.error{
+  background:#fee2e2;
+  color:#b91c1c;
+  padding:10px;
+  border-radius:6px;
+  margin-bottom:15px;
+  text-align:center;
+}
+
+</style>
 <style scoped>
 
 .register-container{
