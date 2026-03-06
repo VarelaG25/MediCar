@@ -6,7 +6,7 @@ const password = ref('')
 
 const navigate = () => {
   console.log('Navegando a la página de registro')
-  location.href = '/register'
+  location.href = '#/register'
 }
 </script>
 
@@ -78,7 +78,7 @@ const navigate = () => {
         </div>
 
         <!-- REGISTER -->
-        <a href="/register" class="mt-6 block text-center text-sm text-slate-600">
+        <a href="#/register" class="mt-6 block text-center text-sm text-slate-600">
           ¿No tienes una cuenta? <span class="text-blue-600 font-bold">Regístrate</span>
         </a>
 

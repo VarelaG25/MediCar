@@ -31,6 +31,6 @@ import VButton from './VButton.vue'
 
 const navegate = (menu: string) => {
     console.log(`Navegando a la sección: ${menu}`)
-    location.href = `/${menu.toLowerCase()}`
+    location.href = `#/${menu.toLowerCase()}`
 }
 </script>
