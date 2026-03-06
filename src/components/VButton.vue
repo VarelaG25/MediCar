@@ -1,8 +1,6 @@
 <template>
-    <div class="card flex justify-center">
-        <Button type="button" :label="props.label" :icon="props.icon" :loading="loading" class="w-full"
-            @click="handleClick" />
-    </div>
+    <Button type="button" :label="props.label" :icon="props.icon" :loading="loading" class="w-full"
+        @click="handleClick" />
 </template>
 
 <script setup lang="ts">

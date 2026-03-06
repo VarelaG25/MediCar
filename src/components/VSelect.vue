@@ -1,5 +1,9 @@
 <template>
-    <div class="card flex justify-center">
+    <div class="flex flex-col gap-2 w-full">
+        <label v-if="props.text">
+            {{ props.text }}
+        </label>
+
         <Select v-model="model" :options="props.source" :optionLabel="props.label" optionValue="id"
             :placeholder="props.placeholder" class="w-full" />
     </div>
@@ -27,6 +31,10 @@ const props = defineProps({
     placeholder: {
         type: String,
         default: ''
+    },
+    text: {
+        type: String,
+        default: null
     }
 })
 </script>
